@@ -75,10 +75,10 @@ mon host = {% for host in groups[mon_group_name] -%}
 {% endif %}
 {% endif %}
 
-{% if public_network is defined and ip_version == 'ipv4' %}
+{% if public_network is defined %}
 public network = {{ public_network }}
 {% endif %}
-{% if cluster_network is defined and ip_version == 'ipv4' %}
+{% if cluster_network is defined %}
 cluster network = {{ cluster_network }}
 {% endif %}
 {% if rgw_override_bucket_index_max_shards is defined %}
